@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
@@ -9,14 +8,41 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "About app",
-          style: TextStyle(
-            fontWeight: FontWeight.bold
-          ),
+          "My Profile",
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: Center(
-        child: const Text("itg.ac.id © 2024"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/images/foto.jpg'),
+              radius: 100,
+            ),
+            SizedBox(height: 30),
+            Text(
+              'Nama: Dikri Ramadhan',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'NIM: 2106005',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'Kelas: Informatika A',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'Email: dikri.raadhan27@gmail.com',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'Hobi: game',
+              style: TextStyle(fontSize: 20),
+            ),
+          ],
+        ),
       ),
     );
   }
